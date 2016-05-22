@@ -1,0 +1,11 @@
+-cp src
+
+-cp hexMachina/hexCore/src
+-cp hexMachina/hexAnnotation/src
+-cp hexMachina/hexInject/src
+-cp hexMachina/hexMVC/src
+-cp hexMachina/hexService/src
+-cp hexMachina/hexState/src
+-cp hexMachina/hexIoC/src
+
+-main example.FlickrExample
