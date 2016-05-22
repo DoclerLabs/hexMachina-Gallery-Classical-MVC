@@ -25,7 +25,7 @@ class LoadPhotosCommand extends BasicCommand implements IAsyncStatelessServiceLi
 		super();
 	}
 	
-	public function execute( ?request : Request ) : Void 
+	public function execute(?request:Request):Void 
 	{
 		#if debug
 		getLogger().debug( "LoadPhotosCommand execute" );
