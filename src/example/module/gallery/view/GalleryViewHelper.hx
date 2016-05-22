@@ -9,10 +9,8 @@ import hex.view.viewhelper.ViewHelper;
  * ...
  * @author Andrei Bunulu
  */
-class GalleryViewHelper extends ViewHelper implements IGalleryModelListener
+class GalleryViewHelper extends ViewHelper<IGalleryView> implements IGalleryModelListener
 {
-	var _layoutView : IGalleryView;
-	
 	@Inject
 	var _model : IGalleryModelRO;
 	
@@ -21,16 +19,14 @@ class GalleryViewHelper extends ViewHelper implements IGalleryModelListener
 		super();
 	}
 	
-	override function _initialize():Void 
+	override function _initialize() : Void 
 	{
 		super._initialize();
-		
-		this._layoutView = cast this._view;
 		this._model.addListener( this );
 	}
 	
-	public function onPhotosLoaded( photos:Array<PhotoVO> ) : Void
+	public function onPhotosLoaded( photos : Array<PhotoVO> ) : Void
 	{
-		this._layoutView.setPhotos( photos );
+		this._view.setPhotos( photos );
 	}
 }

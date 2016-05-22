@@ -1,7 +1,7 @@
 package example.module.gallery.view;
 
 import example.module.gallery.vo.PhotoVO;
-import hex.log.Logger;
+import hex.view.BasicView;
 import js.html.DOMElement;
 import js.html.Image;
 import js.html.ImageElement;
@@ -10,12 +10,13 @@ import js.html.ImageElement;
  * ...
  * @author Andrei Bunulu
  */
-class GalleryViewJS implements IGalleryView
+class GalleryViewJS extends BasicView implements IGalleryView
 {
 	var _layout : DOMElement;
 	
 	public function new( layout : DOMElement ) 
 	{
+		super();
 		this._layout = layout;
 	}
 	
@@ -27,19 +28,7 @@ class GalleryViewJS implements IGalleryView
 			img.src = photo.url;
 			img.alt = photo.name;
 			
-			this._layout.appendChild(img);
+			this._layout.appendChild( img );
 		}
-	}
-	
-	@:isVar public var visible( get, set ) : Bool;
-	
-	function get_visible() : Bool 
-	{
-		return visible;
-	}
-	
-	function set_visible( value : Bool ) : Bool 
-	{
-		return visible = value;
 	}
 }

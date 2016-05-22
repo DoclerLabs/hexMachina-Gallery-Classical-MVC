@@ -4,42 +4,29 @@ import example.module.gallery.vo.PhotoVO;
 import flash.display.Loader;
 import flash.display.Sprite;
 import flash.net.URLRequest;
-import hex.log.Logger;
+import hex.view.BasicView;
 
 /**
  * ...
  * @author Andrei Bunulu
  */
-class GalleryViewFlash implements IGalleryView
+class GalleryViewFlash extends BasicView implements IGalleryView
 {
 	var _layout : Sprite;
 	
-	public function new( layout:Sprite ) 
+	public function new( layout : Sprite ) 
 	{
+		super();
 		this._layout = layout;
 	}
 	
 	public function setPhotos( photos : Array<PhotoVO> ) : Void
 	{
-		Logger.DEBUG(photos);
-		
 		for ( photo in photos)
 		{
 			var loader = new Loader();
 			loader.load( new URLRequest( photo.url ) );
 			this._layout.addChild( loader );
 		}
-	}
-	
-	@:isVar public var visible( get, set ) : Bool;
-	
-	function get_visible():Bool 
-	{
-		return visible;
-	}
-	
-	function set_visible( value : Bool ) : Bool 
-	{
-		return visible = value;
 	}
 }
