@@ -1,5 +1,7 @@
-# hexMachina-GalleryExample
+# hexMachina-Gallery-Classical-MVC
 Example application for hexMachina framework of a Flickr gallery
+
+*Find more information about hexMachina on [hexmachina.org](http://hexmachina.org/)*
 
 ## Target JavaScript
 ```haxe build/build.hxml -debug -js bin/js/Main.js```
