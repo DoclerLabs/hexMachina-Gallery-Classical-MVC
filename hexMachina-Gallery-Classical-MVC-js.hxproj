@@ -4,7 +4,7 @@
   <output>
     <movie outputType="CustomBuild" />
     <movie input="" />
-    <movie path="build\build.hxml" />
+    <movie path="build\build-flash.hxml" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
@@ -39,7 +39,7 @@
     <hidden path="obj" />
   </hiddenPaths>
   <!-- Executed before build -->
-  <preBuildCommand>cmd /c haxe $(OutputFile) -D advanced-telemetry -debug -swf-header 1024:768:61:900000 -swf bin/swf/index.swf</preBuildCommand>
+  <preBuildCommand>cmd /c haxe $(OutputFile)</preBuildCommand>
   <!-- Executed after build -->
   <postBuildCommand alwaysRun="False" />
   <!-- Other project options -->
