@@ -2,14 +2,14 @@ package example.module.gallery.model;
 
 import example.module.gallery.model.IGalleryModelListener;
 import example.module.gallery.vo.PhotoVO;
-import hex.model.Model;
+import hex.model.BasicModel;
 import hex.model.ModelDispatcher;
 
 /**
  * ...
  * @author Andrei Bunulu
  */
-class GalleryModel  extends Model<GalleryModelDispatcher, IGalleryModelListener> implements IGalleryModel
+class GalleryModel  extends BasicModel<GalleryModelDispatcher, IGalleryModelListener> implements IGalleryModel
 {
 	var _photos : Array<PhotoVO>;
 	
