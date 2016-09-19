@@ -1,0 +1,5 @@
+build/build.hxml
+-D advanced-telemetry
+-debug
+-swf-header 1024:768:61:900000
+-swf bin/swf/index.swf

@@ -1,0 +1,3 @@
+build/build.hxml
+-js bin/js/Main.js
+-debug
