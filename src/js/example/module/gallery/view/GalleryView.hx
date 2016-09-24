@@ -1,8 +1,9 @@
-package example.module.gallery.view;
+package js.example.module.gallery.view;
 
 import example.module.gallery.vo.PhotoVO;
+import example.module.gallery.view.IGalleryView;
 import hex.view.BasicView;
-import js.html.DOMElement;
+import js.html.Element;
 import js.html.Image;
 import js.html.ImageElement;
 
@@ -10,11 +11,11 @@ import js.html.ImageElement;
  * ...
  * @author Andrei Bunulu
  */
-class GalleryViewJS extends BasicView implements IGalleryView
+class GalleryView extends BasicView implements IGalleryView
 {
-	var _layout : DOMElement;
+	var _layout : Element;
 	
-	public function new( layout : DOMElement ) 
+	public function new( layout : Element ) 
 	{
 		super();
 		this._layout = layout;
@@ -22,6 +23,7 @@ class GalleryViewJS extends BasicView implements IGalleryView
 	
 	public function setPhotos( photos : Array<PhotoVO> ) : Void
 	{
+		trace("setPhotos");
 		for ( photo in photos)
 		{
 			var img : ImageElement = new Image();

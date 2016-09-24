@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- Sprite -->
+    <div id="gallerySprite" type="flash.display.Sprite">
+	</div>
+
+    <div id="galleryContainer" type="flash.Lib" static-ref="current" factory="addChild">
+		<argument ref="gallerySprite"/>
+	</div>
+
+    <!-- VIEW -->
+    <view id="galleryView" type="flash.example.module.gallery.view.GalleryView">
+        <argument ref="gallerySprite"/>
+    </view>
+		
+</root>

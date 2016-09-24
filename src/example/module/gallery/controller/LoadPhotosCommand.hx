@@ -4,7 +4,6 @@ import example.module.gallery.model.IGalleryModel;
 import example.module.gallery.service.IGetPhotosService;
 import hex.control.Request;
 import hex.control.command.BasicCommand;
-import hex.di.IInjectorContainer;
 import hex.service.stateless.IAsyncStatelessService;
 import hex.service.stateless.IAsyncStatelessServiceListener;
 

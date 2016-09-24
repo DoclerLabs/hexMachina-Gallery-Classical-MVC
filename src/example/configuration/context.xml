@@ -2,5 +2,6 @@
 <root name="flickr">
 	<include file="example/configuration/ModuleConfiguration.xml"/>
 	<include file="example/configuration/ServiceConfiguration.xml"/>
-	<include file="example/configuration/ViewConfigurationJS.xml"/>
+	<include file="js/example/configuration/ViewConfiguration.xml" if="build-js"/>
+	<include file="flash/example/configuration/ViewConfiguration.xml" if="build-flash"/>
 </root>

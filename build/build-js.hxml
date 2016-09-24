@@ -1,3 +1,8 @@
 build/build.hxml
+
 -js bin/js/Main.js
+
 -debug
+
+-D build-flash=0
+-D build-js=1

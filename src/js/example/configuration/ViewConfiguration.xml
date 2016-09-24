@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <!-- DIV -->
+    <div id="galleryDiv" type="js.Browser" static-ref="document" factory="querySelector">
+		<argument value=".gallery"/>
+	</div>
+
+    <!-- VIEW -->
+    <view id="galleryView" type="js.example.module.gallery.view.GalleryView">
+        <argument ref="galleryDiv"/>
+    </view>
+		
+</root>

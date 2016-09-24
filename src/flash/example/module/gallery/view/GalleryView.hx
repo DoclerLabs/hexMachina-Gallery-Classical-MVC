@@ -1,6 +1,7 @@
-package example.module.gallery.view;
+package flash.example.module.gallery.view;
 
 import example.module.gallery.vo.PhotoVO;
+import example.module.gallery.view.IGalleryView;
 import flash.display.Loader;
 import flash.display.Sprite;
 import flash.net.URLRequest;
@@ -10,7 +11,7 @@ import hex.view.BasicView;
  * ...
  * @author Andrei Bunulu
  */
-class GalleryViewFlash extends BasicView implements IGalleryView
+class GalleryView extends BasicView implements IGalleryView
 {
 	var _layout : Sprite;
 	
@@ -22,6 +23,7 @@ class GalleryViewFlash extends BasicView implements IGalleryView
 	
 	public function setPhotos( photos : Array<PhotoVO> ) : Void
 	{
+		trace("setPhotos");
 		for ( photo in photos)
 		{
 			var loader = new Loader();
