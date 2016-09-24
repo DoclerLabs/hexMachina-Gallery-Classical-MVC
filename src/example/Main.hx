@@ -7,9 +7,9 @@ import hex.compiler.parser.xml.XmlCompiler;
  * @author duke
  */
 @:expose( "FlickrExample" )
-class FlickrExample
+class Main
 {
-	static var self : FlickrExample;
+	static var self : Main;
 
 	static public function main() : Void
 	{
@@ -22,9 +22,8 @@ class FlickrExample
 		#elseif flash
 		proxy.addListener( new hex.log.layout.TraceLayout() );
 		#end
+		self = new Main();
 		#end
-
-		self = new FlickrExample();
 	}
 	
 	public function new()

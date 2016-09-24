@@ -8,4 +8,4 @@
 -lib hexstate:0.6.0
 -lib hexioc:0.6.0
 
--main example.FlickrExample
+-main example.Main
