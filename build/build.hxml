@@ -1,3 +1,14 @@
--cp ./src
--lib hexmachina
+ -debug 
+ -js bin/js/Main.js
+ 
+-cp src
+
+-lib hexCore:0.6.0
+-lib hexAnnotation:0.6.0
+-lib hexInject:0.6.0
+-lib hexMVC:0.6.0
+-lib hexService:0.6.0
+-lib hexState:0.6.0
+-lib hexIoC:0.6.0
+
 -main example.FlickrExample

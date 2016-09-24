@@ -65,6 +65,6 @@ private class GalleryModelConfig extends StatelessModelConfig
 {
 	override public function configure() : Void
 	{
-		this.mapModel( IGalleryModel, GalleryModel );
+		this.map( IGalleryModel, GalleryModel );
 	}
 }

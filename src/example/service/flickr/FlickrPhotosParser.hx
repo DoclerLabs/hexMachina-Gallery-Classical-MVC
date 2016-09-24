@@ -2,19 +2,21 @@ package example.service.flickr;
 
 import example.module.gallery.vo.PhotoVO;
 import hex.log.Logger;
+import hex.data.IParser;
 
 /**
  * ...
  * @author Andrei Bunulu
  */
-class FlickrPhotosParser
+class FlickrPhotosParser implements IParser<Dynamic>
 {
 	public function new() 
 	{
 		
 	}
 	
-	public function parse( serializedContent : Dynamic ) : Dynamic 
+	public function parse(serializedContent : Dynamic, target : Dynamic = null) : Dynamic
+	//public function parse( serializedContent : Dynamic ) : Dynamic 
 	{
 		var jsonString : String = serializedContent;
 		jsonString = jsonString.substr( 14 );
