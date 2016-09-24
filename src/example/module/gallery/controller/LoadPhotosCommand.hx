@@ -12,7 +12,7 @@ import hex.service.stateless.IAsyncStatelessServiceListener;
  * ...
  * @author Andrei Bunulu
  */
-class LoadPhotosCommand extends BasicCommand implements IAsyncStatelessServiceListener implements IInjectorContainer
+class LoadPhotosCommand extends BasicCommand implements IAsyncStatelessServiceListener
 {
 	@Inject
 	public var photosService : IGetPhotosService;
