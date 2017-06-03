@@ -4,7 +4,7 @@
     <div id="gallerySprite" type="flash.display.Sprite">
 	</div>
 
-    <div id="galleryContainer" type="flash.Lib" static-ref="current" factory="addChild">
+    <div id="galleryContainer" type="flash.Lib" static-ref="current" factory-method="addChild">
 		<argument ref="gallerySprite"/>
 	</div>
 

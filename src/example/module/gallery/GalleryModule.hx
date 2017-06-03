@@ -36,7 +36,7 @@ class GalleryModule extends Module implements IGalleryModule
 	override function _getRuntimeDependencies() : IRuntimeDependencies
 	{
 		var rd = new RuntimeDependencies();
-		rd.addMappedDependencies( [ IGetPhotosService ] );
+		rd.addMappedDependencies( [ { type: IGetPhotosService, name: '' } ] );
 		return rd;
 	}
 }

@@ -1,11 +1,5 @@
 -cp src
 
--lib hexcore:0.6.0
--lib hexannotation:0.6.0
--lib hexinject:0.6.0
--lib hexmvc:0.6.0
--lib hexservice:0.6.0
--lib hexstate:0.6.0
--lib hexioc:0.6.0
+-lib hexmachina:0.22.0
 
 -main example.Main

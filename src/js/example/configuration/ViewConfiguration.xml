@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <root>
     <!-- DIV -->
-    <div id="galleryDiv" type="js.Browser" static-ref="document" factory="querySelector">
+    <div id="galleryDiv" type="js.Browser" static-ref="document" factory-method="querySelector">
 		<argument value=".gallery"/>
 	</div>
 

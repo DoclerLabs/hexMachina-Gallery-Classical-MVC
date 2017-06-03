@@ -2,7 +2,6 @@ package example.module.gallery.controller;
 
 import example.module.gallery.model.IGalleryModel;
 import example.module.gallery.service.IGetPhotosService;
-import hex.control.Request;
 import hex.control.command.BasicCommand;
 import hex.service.stateless.IAsyncStatelessService;
 import hex.service.stateless.IAsyncStatelessServiceListener;
@@ -24,7 +23,7 @@ class LoadPhotosCommand extends BasicCommand implements IAsyncStatelessServiceLi
 		super();
 	}
 	
-	public function execute(?request:Request):Void 
+	override public function execute():Void 
 	{
 		#if debug
 		getLogger().debug( "LoadPhotosCommand execute" );

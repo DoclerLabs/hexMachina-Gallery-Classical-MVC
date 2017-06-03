@@ -1,6 +1,10 @@
 package example;
 
 import hex.compiler.parser.xml.XmlCompiler;
+import hex.domain.TopLevelDomain;
+import hex.log.LogManager;
+import hex.log.DomainLoggerContext;
+import hex.log.TraceEverythingDomainConfiguration;
 
 /**
  * ...
@@ -14,20 +18,14 @@ class Main
 	static public function main() : Void
 	{
 		#if debug
-		var proxy = new hex.log.layout.LogProxyLayout();
-		#if js
-		var controller = new hex.log.layout.LogLayoutHTMLView( proxy );
-		proxy.addListener( new hex.log.layout.SimpleBrowserLayout( controller.consoleWrapperTaget ) );
-		proxy.addListener( new hex.log.layout.JavaScriptConsoleLayout() );
-		#elseif flash
-		proxy.addListener( new hex.log.layout.TraceLayout() );
-		#end
+		LogManager.context = new DomainLoggerContext(TopLevelDomain.DOMAIN);
+		DomainLoggerContext.getContext().setConfiguration(new TraceEverythingDomainConfiguration());
 		self = new Main();
 		#end
 	}
 	
 	public function new()
 	{
-		XmlCompiler.readXmlFile( "example/configuration/context.xml" );
+		XmlCompiler.compile( "example/configuration/context.xml" );
 	}
 }

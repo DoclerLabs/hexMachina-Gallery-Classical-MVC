@@ -2,7 +2,7 @@ package example.service.flickr;
 
 import example.module.gallery.service.IGetPhotosService;
 import example.module.gallery.vo.PhotoVO;
-import hex.log.Logger;
+import hex.log.HexLog.*;
 import hex.service.stateless.http.HTTPService;
 import hex.service.stateless.http.HTTPServiceConfiguration;
 
@@ -18,7 +18,7 @@ class FlickrGetPhotos extends HTTPService implements IGetPhotosService
 		super();
 		
 		#if debug
-		Logger.DEBUG( "FlickrGetPhotos constructor" );
+		debug( "FlickrGetPhotos constructor" );
 		#end
 	}
 	
@@ -26,7 +26,7 @@ class FlickrGetPhotos extends HTTPService implements IGetPhotosService
 	override public function createConfiguration() : Void
 	{
 		#if debug
-		Logger.DEBUG( "FlickrGetPhotos createConfiguration" );
+		debug( "FlickrGetPhotos createConfiguration" );
 		#end
 		
 		this.setConfiguration( new HTTPServiceConfiguration( "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=bdeda660a5fcdf79170c711c07156f12&user_id=134406781%40N06&format=json" ) );

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <root>
-	<serviceLocator id="flickerServiceLocator" type="hex.config.stateful.ServiceLocator" >
+	<serviceLocator id="flickerServiceLocator" type="hex.di.mapping.MappingConfiguration" >
 		<item> 
 			<key type="Class" value="example.module.gallery.service.IGetPhotosService"/>
 			<value type="Class" value="example.service.flickr.FlickrGetPhotos"/>
